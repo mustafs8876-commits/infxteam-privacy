@@ -1,210 +1,472 @@
-<html lang="ru"><head>
+<html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#100b19">
-<title>INFX TEAM | Privacy Policy</title>
+<meta name="theme-color" content="#08090d">
+<title>INFXTEAM — Terms &amp; Agreement</title>
+
 <style>
-*{box-sizing:border-box}
-body{
- margin:0;background:#0b0910;color:#eee;
- font-family:Arial,sans-serif;line-height:1.75;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #08090d;
+  --card: #101219;
+  --border: #242630;
+  --text: #f3f4f7;
+  --muted: #9295a3;
+  --purple: #8b5cf6;
+  --purple-light: #b69aff;
 }
-header{
- padding:65px 20px;text-align:center;
- background:linear-gradient(135deg,#160b25,#351052,#100b19);
- border-bottom:2px solid #a855f7;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.logo{font-size:38px;font-weight:900;letter-spacing:3px}
-.logo span{color:#bd68ff}
-header p{color:#d7b6f4}
-main{max-width:900px;margin:35px auto;padding:25px}
-section{
- background:#15111d;border:1px solid #342044;
- border-radius:14px;padding:24px;margin-bottom:20px;
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  padding: 32px 18px 60px;
 }
-h2{color:#c084fc;font-size:21px}
-h1{color:#fff}
-a{color:#c084fc}
-.muted{color:#aaa;font-size:13px}
-footer{text-align:center;padding:35px;color:#aaa}
+
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.header {
+  padding: 18px 0 30px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 30px;
+}
+
+.brand {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.brand span {
+  color: var(--purple-light);
+}
+
+.badge {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 10px;
+  letter-spacing: 1.7px;
+  border: 1px solid #35313f;
+  padding: 7px 10px;
+  color: var(--purple-light);
+  border-radius: 4px;
+}
+
+h1 {
+  font-size: clamp(25px, 5vw, 38px);
+  line-height: 1.25;
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+
+.subtitle {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.document {
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: 12px;
+  padding: 28px;
+}
+
+.notice {
+  background: #15121e;
+  border: 1px solid #302442;
+  border-left: 3px solid var(--purple);
+  padding: 17px;
+  border-radius: 5px;
+  margin-bottom: 28px;
+}
+
+.notice-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  color: var(--purple-light);
+}
+
+.notice p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #c7c4d1;
+}
+
+section {
+  margin: 26px 0;
+}
+
+h2 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 11px;
+}
+
+section p, section li {
+  font-size: 13px;
+  color: #b7b9c3;
+  line-height: 1.85;
+}
+
+ul {
+  padding-left: 19px;
+  margin-top: 9px;
+}
+
+li {
+  margin-bottom: 7px;
+}
+
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 24px 0;
+}
+
+.links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+a {
+  color: var(--purple-light);
+  font-size: 12px;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.consent {
+  margin-top: 22px;
+  padding: 19px;
+  border: 1px solid var(--border);
+  background: #0b0c11;
+  border-radius: 9px;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.checkbox-row input {
+  accent-color: var(--purple);
+  width: 17px;
+  height: 17px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.checkbox-row span {
+  font-size: 12px;
+  line-height: 1.8;
+  color: #d1d2da;
+}
+
+.start-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 16px;
+  border: none;
+  border-radius: 7px;
+  background: linear-gradient(100deg, #7746db, #9364f8);
+  color: white;
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.start-btn:disabled {
+  opacity: .35;
+  cursor: not-allowed;
+  filter: grayscale(.4);
+}
+
+.start-btn:not(:disabled):hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 25px #7546db35;
+}
+
+.status {
+  display: none;
+  text-align: center;
+  margin-top: 18px;
+  padding: 15px;
+  border: 1px solid #2b4939;
+  background: #101b15;
+  border-radius: 6px;
+  color: #a4e8bb;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 10px;
+  color: #666975;
+  line-height: 1.8;
+  letter-spacing: .5px;
+}
+
+@media (max-width: 500px) {
+  body {
+    padding: 18px 12px 40px;
+  }
+
+  .document {
+    padding: 20px 16px;
+  }
+
+  .header {
+    padding-top: 10px;
+  }
+}
 </style>
 </head>
+
 <body>
+<div class="container">
 
-<header>
- <div class="logo">👑 INFX <span>TEAM</span></div>
- <h1>OFFICIAL GAMING SHOP</h1>
- <p>YOUR GAME. YOUR STYLE. YOUR TEAM.</p>
- <p>🎮 Standoff 2 • PUBG Mobile • Roblox • Brawl Stars</p>
-</header>
+  <header class="header">
+    <div class="brand">INFX<span>TEAM</span></div>
+    <div class="badge">LEGAL DOCUMENT · 2026</div>
+  </header>
 
-<main>
+  <h1>Terms of Use<br>&amp; Agreement</h1>
+  <p class="subtitle">
+    Service conditions, order scope, user acknowledgement
+    and limitation of responsibility.
+  </p>
 
-<section>
-<h2>ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</h2>
-<p><b>Проект:</b> INFX TEAM SHOP</p>
-<p><b>Дата вступления в силу:</b> 20.10.2022</p>
-<p><b>Последнее обновление:</b> 26.11.2026</p>
-<p><b>Владелец проекта:</b> Абабкова Анастасия Сергеевна</p>
-<p><b>Контакт:</b> anastysia1@hali</p>
+  <div class="document">
 
-</section>
+    <div class="notice">
+      <div class="notice-title">IMPORTANT NOTICE</div>
+      <p>
+        INFXTEAM does not automatically provide software, applications,
+        source code, installation files, licenses or executable products.
+        The exact scope of every offer is determined by its individual
+        description. No item or service should be considered included
+        unless expressly specified.
+      </p>
+    </div>
 
-<section>
-<h2>1. ОБЩИЕ ПОЛОЖЕНИЯ</h2>
-<p>INFX TEAM SHOP (далее — «Магазин») является самостоятельным игровым торговым проектом, предоставляющим пользователям информацию об игровых товарах, цифровых предложениях и сопутствующих услугах.</p>
-<p>Настоящий документ устанавливает правила обработки информации, права пользователей и обязанности владельца проекта в пределах применимого законодательства.</p>
-<p>Использование Магазина означает ознакомление пользователя с настоящими условиями. Если пользователь не согласен с ними, он может прекратить использование сервиса.</p>
-</section>
+    <section>
+      <h2>01 — General Provisions</h2>
+      <p>
+        These Terms govern the use of INFXTEAM services, offers,
+        communication channels and order-related activities.
+        By continuing to use the service, the user acknowledges
+        that they have reviewed these Terms and agrees to the
+        applicable provisions.
+      </p>
+    </section>
 
-<section>
-<h2>2. КАКИЕ ДАННЫЕ МОГУТ ОБРАБАТЫВАТЬСЯ</h2>
-<p>В зависимости от используемых функций могут обрабатываться:</p>
-<ul>
-<li>Telegram ID;</li>
-<li>имя и публичный username Telegram;</li>
-<li>сообщения, направленные службе поддержки;</li>
-<li>номер и история заказа;</li>
-<li>сведения о выбранном товаре;</li>
-<li>статус оплаты и выполнения заказа;</li>
-<li>дата и время обращения;</li>
-<li>технические сведения, необходимые для работы сервиса.</li>
-</ul>
-<p>Магазин не должен запрашивать пароли, секретные коды авторизации и PIN-коды пользователей.</p>
-<p>Фактический перечень обрабатываемых данных должен быть уточнён владельцем проекта.</p>
-</section>
+    <section>
+      <h2>02 — Scope of Offers</h2>
+      <p>
+        Each offer is limited to the specific products, services,
+        information, digital content or other items expressly
+        described in its listing or agreed upon before purchase.
+        References to third-party platforms, games, applications,
+        tools or technologies do not independently constitute
+        a promise to provide those products.
+      </p>
+    </section>
 
-<section>
-<h2>3. ЦЕЛИ ОБРАБОТКИ ДАННЫХ</h2>
-<p>Информация может использоваться для следующих целей:</p>
-<ul>
-<li>обеспечение работы Telegram-бота;</li>
-<li>оформление и обработка заказов;</li>
-<li>подтверждение платежей;</li>
-<li>предоставление консультаций;</li>
-<li>техническая поддержка пользователей;</li>
-<li>рассмотрение претензий и возвратов;</li>
-<li>предотвращение мошенничества;</li>
-<li>выполнение законных требований государственных органов.</li>
-</ul>
-</section>
+    <section>
+      <h2>03 — No Automatic Software Delivery</h2>
+      <p>
+        Unless software is expressly identified as an included item
+        in a specific offer, INFXTEAM is not obligated to provide
+        software or any software-related deliverable.
+      </p>
+      <ul>
+        <li>Software and executable files are not automatically included.</li>
+        <li>Source code and licenses are not automatically included.</li>
+        <li>Mentions of software or technical functionality do not constitute a delivery promise.</li>
+        <li>Unstated features or expectations do not modify the agreed order scope.</li>
+      </ul>
+      <p style="margin-top:10px">
+        The user's purchase must be based on the actual description
+        of the selected offer, not on assumptions about items or
+        functionality that have not been expressly included.
+      </p>
+    </section>
 
-<section>
-<h2>4. ПРАВОВЫЕ ОСНОВАНИЯ</h2>
-<p>Обработка персональных данных осуществляется при наличии соответствующего правового основания.</p>
-<p>В зависимости от ситуации таким основанием может быть:</p>
-<ul>
-<li>согласие пользователя;</li>
-<li>необходимость исполнения договора;</li>
-<li>выполнение юридических обязанностей;</li>
-<li>законный интерес владельца проекта, если он не нарушает права пользователя.</li>
-</ul>
-<p>Если обработка основана на согласии, пользователь может отозвать его в предусмотренном законом порядке.</p>
-</section>
+    <section>
+      <h2>04 — Order Confirmation</h2>
+      <p>
+        Before making a payment, the user is responsible for reviewing
+        the offer description, price, delivery method, scope and
+        applicable conditions. By proceeding with an order, the user
+        acknowledges the described scope of the purchase.
+      </p>
+    </section>
 
-<section>
-<h2>5. ХРАНЕНИЕ И ЗАЩИТА ИНФОРМАЦИИ</h2>
-<p>Владелец проекта должен применять разумные технические и организационные меры для защиты данных от неправомерного доступа, изменения, раскрытия или уничтожения.</p>
-<p>Такие меры могут включать:</p>
-<ul>
-<li>ограничение доступа к административным системам;</li>
-<li>защиту учётных записей;</li>
-<li>контроль доступа к информации о заказах;</li>
-<li>резервное копирование при необходимости;</li>
-<li>удаление данных после окончания срока хранения.</li>
-</ul>
-<p>Срок хранения: [УКАЗАТЬ ФАКТИЧЕСКИЕ СРОКИ ХРАНЕНИЯ].</p>
-</section>
+    <section>
+      <h2>05 — User Responsibilities</h2>
+      <p>
+        Users agree to provide accurate information, comply with
+        applicable law and third-party platform rules, and refrain
+        from making claims based solely on features, products or
+        results that were not included in the agreed offer.
+      </p>
+    </section>
 
-<section>
-<h2>6. ПЕРЕДАЧА ДАННЫХ ТРЕТЬИМ ЛИЦАМ</h2>
-<p>Передача информации третьим лицам допускается только при наличии соответствующего правового основания и в объёме, необходимом для конкретной цели.</p>
-<p>Это может относиться к платёжным операторам, техническим поставщикам услуг и компетентным государственным органам в случаях, предусмотренных законом.</p>
-<p>Магазин не должен продавать персональные данные пользователей.</p>
-</section>
+    <section>
+      <h2>06 — Limitation of Responsibility</h2>
+      <p>
+        INFXTEAM is not responsible for assumptions, expectations
+        or interpretations that are inconsistent with the express
+        description of an offer, nor for disruptions or changes
+        originating from third-party platforms outside its reasonable
+        control.
+      </p>
+      <p style="margin-top:10px">
+        Nothing in these Terms excludes or limits any liability or
+        user right that cannot legally be excluded or limited under
+        applicable law.
+      </p>
+    </section>
 
-<section>
-<h2>7. ПЛАТЕЖИ И ЗАКАЗЫ</h2>
-<p>Пользователю должна предоставляться информация о товаре, его стоимости, условиях оплаты и порядке получения до подтверждения заказа.</p>
-<p>Сведения о платеже могут обрабатываться для подтверждения оплаты, учёта заказов и разрешения спорных ситуаций.</p>
-<p>При использовании стороннего платёжного сервиса его собственная политика конфиденциальности также может применяться.</p>
-<p>Не отправляйте пароли и полные данные банковских карт в переписке с ботом.</p>
-</section>
+    <section>
+      <h2>07 — Third-Party Platforms</h2>
+      <p>
+        INFXTEAM is an independent project and is not affiliated with,
+        endorsed by, or officially connected to third-party developers,
+        publishers or platforms unless expressly stated. Third-party
+        trademarks and materials remain the property of their respective
+        owners.
+      </p>
+    </section>
 
-<section>
-<h2>8. ВОЗВРАТЫ И ПРЕТЕНЗИИ</h2>
-<p>Пользователь вправе обратиться в поддержку по вопросам качества товара, исполнения заказа, отмены покупки и возврата денежных средств.</p>
-<p>Каждое обращение рассматривается индивидуально с учётом обстоятельств покупки и применимого законодательства.</p>
-<p>Цифровой характер товара сам по себе не отменяет предусмотренные законом права потребителя.</p>
-<p>Контакт для обращений: @INFXTEAM_ShopBOT.</p>
-</section>
+    <section>
+      <h2>08 — Acceptance of Terms</h2>
+      <p>
+        By checking the acceptance box and pressing the
+        <strong>START</strong> button, the user confirms that they have
+        read and understood these Terms of Use and the Privacy Policy,
+        and agrees to their applicable provisions.
+      </p>
+      <p style="margin-top:10px">
+        If the user does not agree, they must not proceed with the
+        service or place an order.
+      </p>
+    </section>
 
-<section>
-<h2>9. ПРАВА ПОЛЬЗОВАТЕЛЕЙ</h2>
-<p>В зависимости от применимого законодательства пользователь может иметь право:</p>
-<ul>
-<li>получить информацию об обработке данных;</li>
-<li>запросить доступ к своим данным;</li>
-<li>исправить неточную информацию;</li>
-<li>потребовать удаления данных при наличии оснований;</li>
-<li>ограничить обработку;</li>
-<li>возразить против обработки;</li>
-<li>отозвать согласие;</li>
-<li>обратиться в компетентный надзорный орган.</li>
-</ul>
-<p>Запросы направляются через официальный контакт Магазина.</p>
-</section>
+    <section>
+      <h2>09 — Updates</h2>
+      <p>
+        INFXTEAM may update these Terms when its services, processes
+        or legal requirements change. Updated Terms apply from the
+        publication date, subject to applicable law and existing
+        contractual rights.
+      </p>
+    </section>
 
-<section>
-<h2>10. СТОРОННИЕ ИГРОВЫЕ ПЛАТФОРМЫ</h2>
-<p>Магазин может предоставлять ссылки на официальные ресурсы игровых продуктов.</p>
-<ul>
-<li><a href="https://standoff2.com/">Standoff 2 — официальный сайт</a></li>
-<li><a href="https://www.pubgmobile.com/">PUBG Mobile — официальный сайт</a></li>
-<li><a href="https://www.roblox.com/">Roblox — официальный сайт</a></li>
-<li><a href="https://supercell.com/en/games/brawlstars/">Brawl Stars — официальный сайт</a></li>
-</ul>
-<p>Переход на сторонние ресурсы осуществляется пользователем самостоятельно. Правила обработки информации на таких ресурсах определяются соответствующими владельцами платформ.</p>
-<p>INFX TEAM SHOP является самостоятельным проектом и не заявляет об официальном партнёрстве с разработчиками перечисленных игр.</p>
-</section>
+    <div class="divider"></div>
 
-<section>
-<h2>11. ИНТЕЛЛЕКТУАЛЬНАЯ СОБСТВЕННОСТЬ</h2>
-<p>Названия, игровые изображения, логотипы и товарные знаки сторонних продуктов принадлежат их соответствующим правообладателям.</p>
-<p>Упоминание игровых названий используется для информационного обозначения направлений деятельности Магазина.</p>
-<p>Собственные элементы оформления INFX TEAM используются в рамках брендинга проекта.</p>
-</section>
+    <div class="links">
+      <a href="https://infxteam-privacy.vercel.app/" target="_blank" rel="noopener noreferrer">
+        PRIVACY POLICY ↗
+      </a>
+      <a href="#top" onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
+        BACK TO TOP ↑
+      </a>
+    </div>
 
-<section>
-<h2>12. НЕСОВЕРШЕННОЛЕТНИЕ ПОЛЬЗОВАТЕЛИ</h2>
-<p>При обработке данных несовершеннолетних учитываются специальные требования применимого законодательства.</p>
-<p>В случаях, когда закон требует согласия родителя или законного представителя, соответствующие требования должны соблюдаться до обработки данных.</p>
-<p>Пользователям не следует передавать Магазину конфиденциальные данные и пароли от игровых аккаунтов.</p>
-</section>
+  </div>
 
-<section>
-<h2>13. ИЗМЕНЕНИЕ ПОЛИТИКИ</h2>
-<p>Владелец проекта может обновлять настоящую Политику при изменении законодательства, функциональности Магазина или процессов обработки информации.</p>
-<p>Актуальная редакция должна размещаться на этой странице с указанием даты обновления.</p>
-</section>
+  <div class="consent">
+    <label class="checkbox-row">
+      <input type="checkbox" id="agree">
+      <span>
+        I confirm that I have read and agree to the Terms of Use
+        and acknowledge the Privacy Policy. I understand that software
+        is not included unless explicitly stated in the offer.
+      </span>
+    </label>
 
-<section>
-<h2>14. КОНТАКТНАЯ ИНФОРМАЦИЯ</h2>
-<p><b>Проект:</b> INFX TEAM SHOP</p>
-<p><b>Telegram:</b> @INFXTEAM_ShopBOT</p>
+    <button class="start-btn" id="start" disabled="">
+      START
+    </button>
 
+    <div class="status" id="status">
+      Acceptance recorded on this device.<br>
+      You may now continue.
+    </div>
+  </div>
 
+  <footer class="footer">
+    INFXTEAM · INDEPENDENT DIGITAL SERVICE<br>
+    TERMS VERSION 1.0 · 26 NOVEMBER 2026
+  </footer>
 
-<p><b>Контактный номер</b> +48 89 333 17 41</p></section>
+</div>
 
-</main>
+<script>
+const checkbox = document.getElementById('agree');
+const startButton = document.getElementById('start');
+const statusBox = document.getElementById('status');
 
-<footer>
- <div>👑 INFX TEAM | OFFICIAL GAMING SHOP</div>
- <p>YOUR GAME. YOUR STYLE. YOUR TEAM.</p>
- <p class="muted">© INFX TEAM SHOP</p>
-</footer>
+// Optional: place your next page URL here.
+const NEXT_URL = "";
 
+checkbox.addEventListener('change', () => {
+  startButton.disabled = !checkbox.checked;
+});
+
+startButton.addEventListener('click', () => {
+  if (!checkbox.checked) return;
+
+  const acceptance = {
+    accepted: true,
+    termsVersion: "1.0",
+    acceptedAt: new Date().toISOString(),
+    privacyPolicy: "https://infxteam-privacy.vercel.app/",
+    softwareDisclosureAcknowledged: true
+  };
+
+  // Local demonstration only — not server-side legal evidence.
+  localStorage.setItem("infxteam_terms_acceptance", JSON.stringify(acceptance));
+
+  statusBox.style.display = "block";
+  startButton.textContent = "ACCEPTED";
+  startButton.disabled = true;
+  checkbox.disabled = true;
+
+  if (NEXT_URL) {
+    setTimeout(() => {
+      window.location.href = NEXT_URL;
+    }, 700);
+  }
+});
+</script>
 
 
 </body></html>
